@@ -9,6 +9,7 @@ const nextConfig = {
     loader: 'imgix',
     path: '',
   },
+  assetPrefix: '/',
   basePath: '/monkey-2016.github.io/evm-nft-mint'
 }
 
