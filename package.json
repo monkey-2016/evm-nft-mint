@@ -1,0 +1,34 @@
+{
+  "name": "evm_nft_mint",
+  "description": "NFT mint dapp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "yarn frontend:build",
+    "compile": "yarn smartcontract:compile",
+    "deploy": "yarn workspace smartcontract deploy && yarn frontend:build",
+    "dev": "yarn frontend:dev",
+    "frontend:build": "yarn workspace frontend build",
+    "frontend:dev": "yarn workspace frontend dev",
+    "frontend:start": "yarn workspace frontend start",
+    "test": "yarn smartcontract:test",
+    "smartcontract:test": "yarn workspace smartcontract test",
+    "smartcontract:compile": "yarn workspace smartcontract compile",
+    "smartcontract:upload": "yarn workspace smartcontract upload",
+    "smartcontract:verify": "yarn workspace smartcontract verify",
+    "start": "yarn frontend:start",
+    "upload": "yarn smartcontract:upload",
+    "verify": "yarn smartcontract:verify"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/smartcontract",
+      "**/smartcontract/**",
+      "**/frontend",
+      "**/frontend/**"
+    ]
+  }
+}
